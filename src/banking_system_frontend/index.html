@@ -1,17 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width" />
-  <title>IC Hello Starter</title>
-  <base href="/" />
-  <link rel="icon" href="/favicon.ico" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Banking System</title>
+    <link rel="stylesheet" href="./src/index.css">
 </head>
-
 <body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.jsx"></script>
-</body>
+    <header class="header">
+        <div class="logo">
+            <h1 id="site-title">Blockchain Bank</h1>
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#account-summary" class="nav-link">Account Summary</a></li>
+                <li class="nav-item"><a href="#transfer-funds" class="nav-link">Transfer Funds</a></li>
+                <li class="nav-item"><a href="#transaction-history" class="nav-link">Transaction History</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main class="main-content">
+        <section id="account-summary" class="account-summary-section">
+            <h2 class="section-title">Account Summary</h2>
+            <div class="account-info">
+                <p><strong>Account Holder:</strong> John Doe</p>
+                <p><strong>Account Number:</strong> 1234567890</p>
+                <p><strong>Balance:</strong> $5,000.00</p>
+            </div>
+        </section>
+
+        <section id="transfer-funds" class="transfer-funds-section">
+            <h2 class="section-title">Transfer Funds</h2>
+            <form id="transfer-form" class="transfer-form">
+                <div class="form-group">
+                    <label for="recipient-account" class="form-label">Recipient Account Number</label>
+                    <input type="text" id="recipient-account" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount" class="form-label">Amount</label>
+                    <input type="number" id="amount" class="form-input" required>
+                </div>
+                <button type="submit" class="submit-btn">Transfer</button>
+            </form>
+        </section>
+
+        <section id="transaction-history" class="transaction-history-section">
+            <h2 class="section-title">Transaction History</h2>
+            <div class="transaction-list">
+                <div class="transaction-item">
+                    <p><strong>Date:</strong> 2023-10-01</p>
+                    <p><strong>Type:</strong> Deposit</p>
+                    <p><strong>Amount:</strong> $1,000.00</p>
+                </div>
+                <div class="transaction-item">
+                    <p><strong>Date:</strong> 2023-09-25</p>
+                    <p><strong>Type:</strong> Withdrawal</p>
+                    <p><strong>Amount:</strong> $200.00</p>
+                </div>
+                <!-- More transaction items will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact Us</h2>
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-input" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Blockchain Bank. All rights reserved.</p>
+    </footer>
+
+    <script src="./src/script.js"></script>
+</body>
 </html>
